@@ -26,6 +26,15 @@ let line = new THREE.Line(geometry, material);
 scene.add(line);
 renderer.render(scene, camera);
 
+window.addEventListener('resize', onWindowResize, false);
+
+function onWindowResize () {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
 // let animate = function () {
 //   // eslint-disable-next-line
 //   requestAnimationFrame(animate);
