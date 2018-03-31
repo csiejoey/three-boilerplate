@@ -1,4 +1,3 @@
-// let THREE = require('three');
 import * as THREE from 'three';
 
 let renderer = new THREE.WebGLRenderer();
